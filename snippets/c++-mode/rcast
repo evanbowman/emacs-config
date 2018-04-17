@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rcast
+# key: rcast
+# --
+reinterpret_cast<${2:TYPE}>(${1:VAR})

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: scast
+# key: scast
+# --
+static_cast<${2:TYPE}>(${1:VAR})

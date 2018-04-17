@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: for
+# key: for
+# --
+for (${1:START}; ${2:END}; ${3:STEP}) {
+    $0
+}

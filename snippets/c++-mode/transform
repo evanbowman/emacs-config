@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tfm
+# key: tfm
+# --
+std::transform(std::begin(${1:FROM}), std::end($1), std::begin(${2:TO}), ${3:OP})
