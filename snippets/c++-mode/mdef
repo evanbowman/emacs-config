@@ -2,7 +2,7 @@
 # name: mdef
 # key: mdef
 # --
-${1:RETURN} ${2:CLASS}::${3:METHOD_NAME}($4)
+${1:RETURN} ${2:CLASS}::${3:METHOD_NAME}($4) $5
 {
     $0
 }

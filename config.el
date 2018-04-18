@@ -69,6 +69,7 @@
   (setq mouse-wheel-scroll-amount '(1))
   (setq mouse-wheel-progressive-speed nil))
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; The only thing missing at this point is the custom syntax theme. I
 ;; don't have it autoloaded except in the .emacs, because load-theme

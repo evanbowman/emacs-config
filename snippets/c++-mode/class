@@ -4,13 +4,7 @@
 # --
 class ${1:NAME} {
 public:
-    $1() = default;
-    $1($1& other) = default;
-    $1($1&& other) = default;
-    $1& operator=($1& other) = default;
-    $1& operator=($1&& other) = default;   
-    ~$1() = default;
-    
-private:
     $0
+private:
+
 };
