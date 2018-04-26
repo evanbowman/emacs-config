@@ -16,7 +16,6 @@
 (package-initialize)
 
 (defun install-dependencies(package-list)
-  (package-initialize)
   (unless package-archive-contents
     (package-refresh-contents))
   (dolist (package package-list)
