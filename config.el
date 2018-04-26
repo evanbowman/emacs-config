@@ -32,7 +32,8 @@
                         lua-mode
                         rust-mode
                         yaml-mode
-                        spacemacs-theme))
+                        spacemacs-theme
+                        ag))
 
 (setq ring-bell-function 'ignore)
 
