@@ -9,3 +9,6 @@
 (setq linum-format " %d ")
 
 (when window-system (load-theme 'spacemacs-dark t))
+
+(require 'powerline)
+(powerline-default-theme)

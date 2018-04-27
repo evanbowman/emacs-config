@@ -15,6 +15,7 @@
 
 (defun my-c-mode-common-hook ()
   (flycheck-mode)
+  (highlight-lines-matching-regexp ".\{81\}" 'hi-yellow)
   (c-set-offset 'substatement-open 0)
   (setq c++-tab-always-indent t)
   (linum-mode 1)

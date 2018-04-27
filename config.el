@@ -32,7 +32,8 @@
                         rust-mode
                         yaml-mode
                         spacemacs-theme
-                        ag))
+                        ag
+                        powerline))
 
 (setq ring-bell-function 'ignore)
 
