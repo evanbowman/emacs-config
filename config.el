@@ -20,6 +20,7 @@
     (package-refresh-contents))
   (dolist (package package-list)
     (unless (package-installed-p package)
+      (switch-to-buffer "*Messages*")
       (package-install package))))
 
 (install-dependencies '(yasnippet
@@ -32,6 +33,7 @@
                         rust-mode
                         yaml-mode
                         spacemacs-theme
+                        gruvbox-theme
                         ag
                         powerline))
 
