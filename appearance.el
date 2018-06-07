@@ -8,7 +8,7 @@
 
 (setq linum-format " %d ")
 
-(when window-system (load-theme 'gruvbox t))
+(when window-system (load-theme 'spacemacs-dark t))
 
 (require 'powerline)
 (powerline-default-theme)

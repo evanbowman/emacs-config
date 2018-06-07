@@ -33,9 +33,9 @@
                         rust-mode
                         yaml-mode
                         spacemacs-theme
-                        gruvbox-theme
                         ag
-                        powerline))
+                        powerline
+                        find-file-in-project))
 
 (setq ring-bell-function 'ignore)
 
