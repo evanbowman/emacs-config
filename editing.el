@@ -22,6 +22,8 @@
   (setq c-basic-offset 4)
   (setq c-indent-level 4))
 
+(global-set-key (kbd "C-x C-g") 'ffip)
+
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++11")))
 
