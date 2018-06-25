@@ -7,11 +7,12 @@
 
 (require 'package)
 
-(dolist (element '(("melpa" "https://melpa.org/packages/" 10)
+(dolist (element '(("melpa" "https://melpa.org/packages/")
                    ("marmalade" "https://marmalade-repo.org/packages/" 5)
                    ("elpa" "http://elpa.gnu.org/packages/" 4)))
   (add-to-list 'package-archives (cons (car element) (cadr element)) t)
-  (add-to-list 'package-archive-priorities (cons (car element) (car (cddr element))) t))
+  (when (> emacs-major-version 24)
+    (add-to-list 'package-archive-priorities (cons (car element) (car (cddr element))) t)))
 
 (package-initialize)
 
@@ -23,24 +24,28 @@
       (switch-to-buffer "*Messages*")
       (package-install package))))
 
-(install-dependencies '(yasnippet
-                        cmake-mode
-                        magit
-                        protobuf-mode
-                        flycheck
-                        js2-mode
-                        lua-mode
-                        rust-mode
-                        yaml-mode
-                        spacemacs-theme
-                        ag
-                        powerline
-                        find-file-in-project))
+(install-dependencies
+ (let ((dependencies '(yasnippet
+                       cmake-mode
+                       magit
+                       protobuf-mode
+                       flycheck
+                       js2-mode
+                       lua-mode
+                       rust-mode
+                       yaml-mode
+                       spacemacs-theme
+                       ag
+                       powerline
+                       find-file-in-project)))
+   (cond ((> emacs-major-version 24)
+          (cons 'magit dependencies))
+         (t dependencies))))
 
 (setq ring-bell-function 'ignore)
 
-(load "~/config/editing.el")
-(load "~/config/appearance.el")
+(load "~/emacs-config/editing.el")
+(load "~/emacs-config/appearance.el")
 
 (when (eq system-type 'darwin)
   ;; bind meta key to option (alt)
