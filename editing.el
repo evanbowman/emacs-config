@@ -1,7 +1,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-0.12.2/")
 (require 'yasnippet)
-(setq yas-snippet-dirs '("~/config/snippets"))
+(setq yas-snippet-dirs '("~/emacs-config/snippets"))
 (yas-global-mode)
 (setq yas-triggers-in-field t)
 

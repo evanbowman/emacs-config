@@ -27,7 +27,6 @@
 (install-dependencies
  (let ((dependencies '(yasnippet
                        cmake-mode
-                       magit
                        protobuf-mode
                        flycheck
                        js2-mode
@@ -39,7 +38,7 @@
                        powerline
                        find-file-in-project)))
    (cond ((> emacs-major-version 24)
-          (cons 'magit dependencies))
+          (append '(magit) dependencies))
          (t dependencies))))
 
 (setq ring-bell-function 'ignore)
