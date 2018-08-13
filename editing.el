@@ -25,6 +25,25 @@
 (global-set-key (kbd "C-x C-g") 'ffip)
 (global-set-key (kbd "C-x C-a") 'ag)
 
+;; Replacement for <C-up> and <C-down>
+(global-set-key (kbd "M-n") 'forward-paragraph)
+(global-set-key (kbd "M-p") 'backward-paragraph)
+
+((lambda ()
+   ;; I'm having trouble breaking my arrow key habit, maybe disabling them will help
+   (global-unset-key (kbd "<left>"))
+   (global-unset-key (kbd "<right>"))
+   (global-unset-key (kbd "<up>"))
+   (global-unset-key (kbd "<down>"))
+   (global-unset-key (kbd "<C-left>"))
+   (global-unset-key (kbd "<C-right>"))
+   (global-unset-key (kbd "<C-up>"))
+   (global-unset-key (kbd "<C-down>"))
+   (global-unset-key (kbd "<M-left>"))
+   (global-unset-key (kbd "<M-right>"))
+   (global-unset-key (kbd "<M-up>"))
+   (global-unset-key (kbd "<M-down>"))))
+
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++11")))
 
