@@ -29,6 +29,8 @@
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 
+(global-set-key (kbd "C-;") 'avy-goto-char)
+
 ((lambda ()
    ;; I'm having trouble breaking my arrow key habit, maybe disabling them will help
    (global-unset-key (kbd "<left>"))

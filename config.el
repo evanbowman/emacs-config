@@ -36,7 +36,8 @@
                        spacemacs-theme
                        ag
                        powerline
-                       find-file-in-project)))
+                       find-file-in-project
+                       avy)))
    (cond ((> emacs-major-version 24)
           (append '(magit) dependencies))
          (t dependencies))))
