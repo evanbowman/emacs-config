@@ -11,8 +11,6 @@
 
 (delete-selection-mode)
 
-(windmove-default-keybindings)
-
 (defun my-c-mode-common-hook ()
   (flycheck-mode)
   (highlight-lines-matching-regexp ".\{81\}" 'hi-yellow)
