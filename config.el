@@ -47,6 +47,9 @@
 (load "~/emacs-config/editing.el")
 (load "~/emacs-config/appearance.el")
 
+;; I still like google better
+(setq eww-search-prefix "https://www.google.com/search?q=")
+
 (when (eq system-type 'darwin)
   ;; bind meta key to option (alt)
   (setq mac-option-modifier 'meta)
