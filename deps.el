@@ -19,12 +19,12 @@
        (package-install package))))
  (let ((dependencies '(yasnippet
                        cmake-mode
-                       protobuf-mode
-                       flycheck
                        js2-mode
                        lua-mode
                        rust-mode
                        yaml-mode
+                       protobuf-mode
+                       flycheck
                        spacemacs-theme
                        ag
                        powerline
