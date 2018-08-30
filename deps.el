@@ -1,13 +1,7 @@
-;;; My emacs config
-;;;
-;;; I have this in a separate file so emacs Custom doesn't spit junk
-;;; into it.
-;;;
-;;; Evan Bowman
 
 (require 'package)
 
-(dolist (element '(("melpa" "https://melpa.org/packages/")
+(dolist (element '(("melpa" "https://melpa.org/packages/" 9)
                    ("marmalade" "https://marmalade-repo.org/packages/" 5)
                    ("elpa" "http://elpa.gnu.org/packages/" 4)))
   (add-to-list 'package-archives (cons (car element) (cadr element)) t)
@@ -16,15 +10,13 @@
 
 (package-initialize)
 
-(defun install-dependencies(package-list)
-  (unless package-archive-contents
-    (package-refresh-contents))
-  (dolist (package package-list)
-    (unless (package-installed-p package)
-      (switch-to-buffer "*Messages*")
-      (package-install package))))
-
-(install-dependencies
+((lambda (package-list)
+   (unless package-archive-contents
+     (package-refresh-contents))
+   (dolist (package package-list)
+     (unless (package-installed-p package)
+       (switch-to-buffer "*Messages*")
+       (package-install package))))
  (let ((dependencies '(yasnippet
                        cmake-mode
                        protobuf-mode
@@ -41,18 +33,3 @@
    (cond ((> emacs-major-version 24)
           (append '(magit) dependencies))
          (t dependencies))))
-
-(setq ring-bell-function 'ignore)
-
-(load "~/emacs-config/editing.el")
-(load "~/emacs-config/appearance.el")
-
-;; I still like google better
-(setq eww-search-prefix "https://www.google.com/search?q=")
-
-(when (eq system-type 'darwin)
-  ;; bind meta key to option (alt)
-  (setq mac-option-modifier 'meta)
-  ;; smooth scrolling
-  (setq mouse-wheel-scroll-amount '(1))
-  (setq mouse-wheel-progressive-speed nil))
