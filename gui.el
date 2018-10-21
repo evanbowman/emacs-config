@@ -3,12 +3,12 @@
 
 (show-paren-mode)
 
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-
 (setq linum-format " %d ")
 
-(when window-system (load-theme 'spacemacs-dark t))
+(when window-system
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1)
+  (load-theme 'spacemacs-dark t))
 
 (require 'powerline)
 (powerline-default-theme)
