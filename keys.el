@@ -1,7 +1,7 @@
 
 (global-set-key (kbd "M-{") 'insert-pair)
 (global-set-key (kbd "C-x C-g") 'ffip)
-(global-set-key (kbd "C-x C-a") 'ag)
+(global-set-key (kbd "C-x C-a") 'ag-project)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "C-;") 'avy-goto-char)
