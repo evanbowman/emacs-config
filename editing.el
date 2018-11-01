@@ -23,6 +23,9 @@
             (setq flycheck-gcc-language-standard "c++11")
             (setq flycheck-clang-language-standard "c++11")))
 
+(add-hook 'json-mode-hook
+          (lambda () (local-set-key (kbd "C-c C-c") #'json-pretty-print)))
+
 (setq-default indent-tabs-mode nil)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
