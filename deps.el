@@ -22,9 +22,11 @@
                        js2-mode
                        lua-mode
                        rust-mode
+                       kotlin-mode
                        yaml-mode
                        protobuf-mode
                        flycheck
+                       flycheck-kotlin
                        spacemacs-theme
                        ag
                        powerline

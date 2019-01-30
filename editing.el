@@ -9,20 +9,38 @@
 
 (delete-selection-mode)
 
-(defun my-c-mode-common-hook ()
-  (flycheck-mode)
-  (c-set-offset 'substatement-open 0)
-  (setq c++-tab-always-indent t)
-  (linum-mode 1)
-  (setq c-basic-offset 4)
-  (setq c-indent-level 4))
+;;;
+;;; Kotlin
+;;;
+(require 'flycheck-kotlin)
+(add-hook 'kotlin-mode-hook
+          (lambda ()
+            (flycheck-mode)
+            (setq kotlin-tab-width 4)))
 
-(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+;;;
+;;; C++
+;;;
 (add-hook 'c++-mode-hook
           (lambda ()
             (setq flycheck-gcc-language-standard "c++11")
             (setq flycheck-clang-language-standard "c++11")))
 
+;;;
+;;; C-Mode common
+;;;
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (flycheck-mode)
+            (c-set-offset 'substatement-open 0)
+            (setq c++-tab-always-indent t)
+            (linum-mode 1)
+            (setq c-basic-offset 4)
+            (setq c-indent-level 4)))
+
+;;;
+;;; JSON
+;;;
 (add-hook 'json-mode-hook
           (lambda () (local-set-key (kbd "C-c C-c") #'json-pretty-print)))
 
