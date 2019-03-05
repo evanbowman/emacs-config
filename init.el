@@ -17,3 +17,5 @@
 
 ;; I still like google better
 (setq eww-search-prefix "https://www.google.com/search?q=")
+
+(defun .emacs () (interactive) (find-file user-init-file))
