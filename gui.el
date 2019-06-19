@@ -12,3 +12,6 @@
 
 (require 'powerline)
 (powerline-default-theme)
+
+(display-time-mode 1)
+(set 'display-time-default-load-average nil)
