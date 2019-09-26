@@ -27,6 +27,7 @@
                        protobuf-mode
                        flycheck
                        flycheck-kotlin
+                       git-link
                        spacemacs-theme
                        ag
                        powerline
