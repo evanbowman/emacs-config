@@ -69,4 +69,4 @@
     (git-link (git-link--select-remote)
               (car region)
               (car (cdr region)))
-    (kill-new (substring (current-kill 0 nil) 8 -1))))
+    (kill-new (substring (current-kill 0 nil) 8))))
