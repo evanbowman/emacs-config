@@ -1,9 +1,6 @@
-;;; My emacs config
 ;;;
-;;; I have this in a separate file so emacs Custom doesn't spit junk
-;;; into it.
+;;; Entry Point
 ;;;
-;;; Evan Bowman
 
 (setq ring-bell-function 'ignore)
 
@@ -19,3 +16,4 @@
 (setq eww-search-prefix "https://www.google.com/search?q=")
 
 (defun .emacs () (interactive) (find-file user-init-file))
+(defun emacs-config () (interactive) (find-file "~/emacs-config/"))
