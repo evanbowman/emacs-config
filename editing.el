@@ -44,6 +44,13 @@
 (add-hook 'json-mode-hook
           (lambda () (local-set-key (kbd "C-c C-c") #'json-pretty-print)))
 
+;;;
+;;; Docker
+;;;
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+
 (setq-default indent-tabs-mode nil)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
