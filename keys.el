@@ -1,7 +1,5 @@
 
 (global-set-key (kbd "M-{") 'insert-pair)
-(global-set-key (kbd "C-x C-g") 'ffip)
-(global-set-key (kbd "C-x C-a") 'ag-project)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "C-;") 'avy-goto-char)
@@ -17,6 +15,12 @@
 (global-unset-key (kbd "<M-right>"))
 (global-unset-key (kbd "<M-up>"))
 (global-unset-key (kbd "<M-down>"))
+
+(global-set-key (kbd "C-1") 'ff-find-other-file)
+(global-set-key (kbd "C-2") 'ag-project)
+(global-set-key (kbd "C-3") 'ffip)
+(global-set-key (kbd "C-9") 'magit-status)
+
 
 (when (eq system-type 'darwin)
   ;; bind meta key to option (alt)
