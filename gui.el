@@ -8,10 +8,18 @@
 (when window-system
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
-  (load-theme 'spacemacs-dark t))
+  (load-theme 'solarized-dark t))
 
 (require 'powerline)
 (powerline-default-theme)
 
-(display-time-mode 1)
-(set 'display-time-default-load-average nil)
+(setq current-theme nil)
+
+
+(defun set-theme (theme)
+  (interactive "theme: ")
+  (if current-theme
+      (progn
+        (disable-theme current-theme)
+        (setq current-theme theme)))
+  (load-theme theme))
