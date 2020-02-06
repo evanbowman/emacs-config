@@ -35,3 +35,7 @@
 
 (defun .emacs () (interactive) (find-file user-init-file))
 (defun emacs-config () (interactive) (find-file config-dir))
+
+(load "server")
+(unless (server-running-p)
+  (server-start))
