@@ -33,6 +33,13 @@
 ;; I still like google better
 (setq eww-search-prefix "https://www.google.com/search?q=")
 
+;; For large insert statements in sql backups, sometimes the output of ag causes
+;; a stack overflow in the emacs regexp matcher (which I believe the ag package
+;; uses to run syntax highlighting in the compilation buffer). Technically, .sql
+;; files can also contain source code, but I personally do not like the idea of
+;; implementing complex business logic in sql queries.
+(setq-default ag-ignore-list '("*.sql"))
+
 (defun .emacs () (interactive) (find-file user-init-file))
 (defun emacs-config () (interactive) (find-file config-dir))
 

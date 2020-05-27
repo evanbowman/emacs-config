@@ -33,7 +33,8 @@
                        powerline
                        find-file-in-project
                        dockerfile-mode
-                       avy)))
+                       avy
+                       tea-time)))
    (cond ((> emacs-major-version 24)
           (append '(magit) dependencies))
          (t dependencies))))

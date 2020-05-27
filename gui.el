@@ -23,3 +23,19 @@
         (disable-theme current-theme)
         (setq current-theme theme)))
   (load-theme theme))
+
+(require 'tea-time)
+
+(setq tea-time-sound (concat config-dir "Temple_Bell.wav"))
+
+(defun herbal-tea ()
+  (interactive)
+  (tea-timer (* 3 60)))
+
+(defun green-tea ()
+  (interactive)
+  (tea-timer (* 3 60)))
+
+(defun black-tea ()
+  (interactive)
+  (tea-timer (* 5 60)))
