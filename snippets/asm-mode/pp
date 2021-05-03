@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: pp
+# key: pp
+# --
+push    ${1: register_name }
+        $0
+        pop     ${2: register_name }

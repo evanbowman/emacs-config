@@ -53,7 +53,14 @@
 
 (setq-default indent-tabs-mode nil)
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(defun prog-mode-before-save-hook ()
+  (when (derived-mode-p 'prog-mode)
+    (delete-trailing-whitespace)))
+
+
+(add-hook 'before-save-hook 'prog-mode-before-save-hook)
+
 
 (defun query-replace-swap (a b)
   "Swap two pieces of text wherever they appear, using `query-replace-regexp'."
