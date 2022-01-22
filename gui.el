@@ -5,11 +5,13 @@
 
 (setq linum-format " %d ")
 
+(setq *current-theme* 'spacemacs-dark)
+
 (when window-system
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
   (menu-bar-mode -1)
-  (load-theme 'spacemacs-dark t))
+  (load-theme *current-theme* t))
 
 (require 'powerline)
 (powerline-default-theme)

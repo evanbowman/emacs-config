@@ -19,7 +19,17 @@
 (global-set-key (kbd "C-1") 'ff-find-other-file)
 (global-set-key (kbd "C-2") 'ag-project)
 (global-set-key (kbd "C-3") 'ffip)
+(global-set-key (kbd "C-8") 'compile)
 (global-set-key (kbd "C-9") 'magit-status)
+
+(defun swap-theme ()
+  (interactive)
+  (if (eq *current-theme* 'spacemacs-dark)
+      (setq *current-theme* 'spacemacs-light)
+    (setq *current-theme* 'spacemacs-dark))
+  (load-theme *current-theme* t))
+
+(global-set-key (kbd "C-7") 'swap-theme)
 
 
 (when (eq system-type 'darwin)
