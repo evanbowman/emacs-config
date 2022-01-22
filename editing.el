@@ -77,10 +77,10 @@
 
 ;; 'git-link prepends https://, which doesn't work for GitHub remotes hosted on
 ;; the local network.
-(defun git-link-lan ()
+(defun git-link-http ()
   (interactive)
   (let ((region (git-link--get-region)))
     (git-link (git-link--select-remote)
               (car region)
               (car (cdr region)))
-    (kill-new (substring (current-kill 0 nil) 8))))
+    (kill-new (replace-regexp-in-string "https" "http" (current-kill 0 nil)))))
