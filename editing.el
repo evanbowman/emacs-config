@@ -84,3 +84,11 @@
               (car region)
               (car (cdr region)))
     (kill-new (replace-regexp-in-string "https" "http" (current-kill 0 nil)))))
+
+
+;;;
+;;; skyland-lisp
+;;;
+
+(font-lock-add-keywords 'lisp-mode '(("defn" . font-lock-keyword-face)))
+(font-lock-add-keywords 'lisp-mode '(("defn/c" . font-lock-keyword-face)))
