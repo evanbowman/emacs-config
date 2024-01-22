@@ -28,6 +28,7 @@
                        flycheck
                        flycheck-kotlin
                        git-link
+                       nord-theme
                        spacemacs-theme
                        ag
                        powerline
