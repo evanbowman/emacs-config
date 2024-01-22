@@ -16,6 +16,12 @@
     (when (not (load path))
       (error "failed to load %s") path)))
 
+;; A new maintainer took over ffip and ruined everything. Breaking compatibility
+;; and changing the way an existing package works is evil. But some people just
+;; don't care. It's amazing how far some people go in the world while creating
+;; chaos everywhere they go.
+(load (concat config-dir "vendored/find-file-in-project.el"))
+
 (cond
  ((eq system-type 'windows-nt)
   ;; Magit needs to be told where git lives in Windows, ffip needs to know

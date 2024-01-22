@@ -31,9 +31,9 @@
                        spacemacs-theme
                        ag
                        powerline
-                       find-file-in-project
                        dockerfile-mode
                        avy
+                       ivy
                        tea-time)))
    (cond ((> emacs-major-version 24)
           (append '(magit) dependencies))

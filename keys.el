@@ -38,3 +38,8 @@
   ;; smooth scrolling
   (setq mouse-wheel-scroll-amount '(1))
   (setq mouse-wheel-progressive-speed nil))
+
+(setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none)

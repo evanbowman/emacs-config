@@ -62,17 +62,6 @@
 (add-hook 'before-save-hook 'prog-mode-before-save-hook)
 
 
-(defun query-replace-swap (a b)
-  "Swap two pieces of text wherever they appear, using `query-replace-regexp'."
-  (interactive "sSwap: \nswith: ")
-  (let ((use-region (and transient-mark-mode mark-active)))
-    (query-replace-regexp
-     (rx (or (group (eval a)) (eval b)))
-     (quote (replace-eval-replacement replace-quote (if (match-string 1) b a)))
-     nil
-     (when use-region (region-beginning))
-     (when use-region (region-end)))))
-
 (setq-default fill-column 80)
 
 ;; 'git-link prepends https://, which doesn't work for GitHub remotes hosted on
