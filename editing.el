@@ -34,9 +34,10 @@
             (flycheck-mode)
             (c-set-offset 'substatement-open 0)
             (setq c++-tab-always-indent t)
-            (linum-mode 1)
             (setq c-basic-offset 4)
-            (setq c-indent-level 4)))
+            (setq tab-width 4 indent-tabs-mode nil)
+            (setq c-indent-level 4)
+            (display-line-numbers-mode)))
 
 ;;;
 ;;; JSON
