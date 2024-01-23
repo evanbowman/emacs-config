@@ -5,7 +5,7 @@
 
 (setq linum-format " %d ")
 
-(setq *current-theme* 'spacemacs-dark)
+(setq *current-theme* 'nord)
 
 (when window-system
   (scroll-bar-mode -1)
@@ -35,7 +35,7 @@
 
 (defun dark-theme ()
   (interactive)
-  (load-theme 'spacemacs-dark))
+  (load-theme 'nord))
 
 
 (require 'tea-time)
